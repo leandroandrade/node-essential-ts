@@ -1,5 +1,5 @@
-export default class HelloRepository {
+export default {
     async getMessage(): Promise<string> {
         return 'hello node-essential-ts';
-    }
-}
+    },
+};

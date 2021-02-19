@@ -27,6 +27,12 @@
         "js": "never",
         "ts": "never"
       }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
     ]
   },
   "settings": {

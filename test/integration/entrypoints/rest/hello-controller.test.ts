@@ -10,7 +10,7 @@ describe('simple test', () => {
 
         expect(status).toBe(200);
         expect(title).toBe('hello');
-        expect(message).toBe('hello node-essential');
+        expect(message).toBe('hello node-essential-ts');
 
         done();
     });

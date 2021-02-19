@@ -1,6 +1,6 @@
 import log from '../logger';
 
-const exit = (signal, server) => {
+const exit = (signal: string, server) => {
     log.info(`${signal} signal received`);
 
     log.info('Closing HTTP server...');

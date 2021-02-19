@@ -1,14 +1,19 @@
-import * as dotenv from 'dotenv-safe';
+import * as dotenv from 'dotenv';
 import express from 'express';
+import { join } from 'path';
 
 import setUp from '../setup';
 import setDocs from '../documentation';
 import setRoutes from '../routes';
 import setHanders from '../handlers';
 
-dotenv.config({
-    path: process.env.NODE_ENV === 'test' ? '.env.test' : '.env',
-});
+const envs = {
+    test: join(__dirname, '..', '..', '..', '.env.test'),
+    production: join(__dirname, '..', '..', '..', '.env.production'),
+    default: join(__dirname, '..', '..', '..', '.env'),
+};
+
+dotenv.config({ path: envs[process.env.NODE_ENV || 'default'] });
 
 const app = express();
 

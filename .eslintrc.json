@@ -20,6 +20,7 @@
     "eslint-plugin-import-helpers"
   ],
   "rules": {
+    "import/prefer-default-export": "off",
     "import/extensions": [
       "error",
       "ignorePackages",

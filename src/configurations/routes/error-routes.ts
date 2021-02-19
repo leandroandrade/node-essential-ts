@@ -1,7 +1,6 @@
 import { Router } from 'express';
+import ErrorController from '../../entrypoints/rest/error-controller';
 
 export default (router: Router): void => {
-    router.get('/error', (req, res) => {
-        return res.json({ error: true });
-    });
+    router.get('/error', ErrorController);
 };

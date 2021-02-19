@@ -1,7 +1,15 @@
-import express from "express";
+import express from 'express';
+
+import setUp from '../setup';
+import setDocs from '../documentation';
+import setRoutes from '../routes';
+import setHanders from '../handlers';
 
 const app = express();
 
-app.get("/", (req, res) => res.json({ message: "Hello World" }));
+setRoutes(app);
+setDocs(app);
+setHanders(app);
+setUp(app);
 
 export default app;

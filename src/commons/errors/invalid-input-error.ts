@@ -1,7 +1,7 @@
-export class InvalidInputError extends Error {
+import { BaseError } from './base-error';
+
+export class InvalidInputError extends BaseError {
     constructor(message?: string, statusCode?: number) {
-        super(message || 'Input error');
-        this.name = 'InvalidInputError';
-        // this.statusCode = statusCode || 400;
+        super(message || 'Input error', 'InvalidInputError', statusCode);
     }
 }

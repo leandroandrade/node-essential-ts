@@ -1,3 +1,5 @@
+import { StatusCode } from '../../commons/http';
+
 export default (err, req, res, next): void => {
     const { statusCode, messages, message, date = new Date() } = err;
 
@@ -11,7 +13,7 @@ export default (err, req, res, next): void => {
         });
     }
 
-    return res.status(500).send({
+    return res.status(StatusCode.INTERNAL_SERVER_ERROR).send({
         messages: messages || [
             { code: 500, message: 'Ocorreu um erro no servidor.', date },
         ],

@@ -1,10 +1,10 @@
 export class BaseError extends Error {
     readonly statusCode: number;
 
-    constructor(message: string, name: string, statusCode: number) {
+    constructor(message: string, statusCode: number, name: string) {
         super(message);
 
-        this.name = name;
         this.statusCode = statusCode || 400;
+        this.name = name;
     }
 }

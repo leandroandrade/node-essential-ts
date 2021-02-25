@@ -11,9 +11,9 @@ dotenv.config({ path: envs[process.env.NODE_ENV || 'default'] });
 
 const app = express();
 
+setUp(app);
 setRoutes(app);
 setDocs(app);
 setHanders(app);
-setUp(app);
 
 export default app;

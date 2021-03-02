@@ -4,7 +4,6 @@ import 'express-async-errors';
 
 import { envs } from '../env';
 import setUp from '../setup';
-import setDocs from '../documentation';
 import setRoutes from '../routes';
 import setHanders from '../handlers';
 
@@ -14,7 +13,6 @@ const app = express();
 
 setUp(app);
 setRoutes(app);
-setDocs(app);
 setHanders(app);
 
 export default app;

@@ -1,0 +1,11 @@
+node_modules
+Dockerfile
+test
+coverage
+README.md
+.dockerignore
+.git
+.gitignore
+.eslintrc.js
+.prettierrc
+.env

@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import { InvalidInputError } from '../../commons/errors';
 
-export default (req: Request, res: Response, next) => {
+const runError = (req: Request, res: Response, next): Promise<Response> => {
     throw new InvalidInputError(`This is a simple error example!`);
 };
+
+export default { runError };

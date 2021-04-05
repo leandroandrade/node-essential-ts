@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
-    "test": "NODE_ENV=test jest --no-cache --coverage",
-    "dev": "ts-node-dev  --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
+    "test": "cross-env NODE_ENV=test jest --no-cache --coverage",
+    "test:watch": "cross-env NODE_ENV=test jest --no-cache --watchAll",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
     "build": "rimraf dist && tsc -p tsconfig-build.json"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^6.11.0",
